@@ -1,0 +1,282 @@
+:root {
+  --Strong-cyan: hsl(172, 67%, 45%);
+  --Very-dark-cyan: hsl(183, 100%, 15%);
+  --Dark-grayish-cyan: hsl(186, 14%, 43%);
+  --Grayish-cyan: hsl(184, 14%, 56%);
+  --Light-grayish-cyan: hsl(185, 41%, 84%);
+  --Very-light-grayish-cyan: hsl(189, 41%, 97%);
+  --White: hsl(0, 0%, 100%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--Light-grayish-cyan);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Space Mono", sans-serif;
+}
+
+header {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 7px;
+  color: var(--Very-dark-cyan);
+  margin-bottom: 20px;
+}
+
+.container {
+  background-color: var(--White);
+  max-width: 400px;
+  border-radius: 7px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.input {
+  position: relative;
+  left: 2%;
+  margin-top: 20px;
+  margin-bottom: 25px;
+}
+
+.input input {
+  background-color: var(--Very-light-grayish-cyan);
+  border: none;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 7px;
+  width: 95%;
+  font-family: inherit;
+  color: var(--Very-dark-cyan);
+  text-align: right;
+  padding-right: 15px;
+  outline: none;
+}
+
+.input:nth-child(1) {
+  color: var(--Grayish-cyan);
+}
+
+ul {
+  list-style: none;
+}
+
+.Select-tip {
+  display: flex;
+  justify-content: space-around;
+}
+
+.buttons button,
+#Custom {
+  background-color: var(--Very-dark-cyan);
+  color: white;
+  border: none;
+  font-size: 20px;
+  font-family: inherit;
+  cursor: pointer;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  margin-bottom: 20px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+.left-tips {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-right: 20px;
+}
+
+#Custom {
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Dark-grayish-cyan);
+}
+
+.buttons button:hover {
+  background-color: var(--Strong-cyan);
+  color: var(--Very-dark-cyan);
+  transition: all ease-in-out 0.3s;
+}
+
+.buttons p {
+  color: var(--Grayish-cyan);
+  margin-bottom: 13px;
+}
+
+.People-Input {
+  position: relative;
+  left: 8.5%;
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
+.People-Input input {
+  background-color: var(--Very-light-grayish-cyan);
+  border: none;
+  height: 40px;
+  font-size: 20px;
+  border-radius: 7px;
+  width: 84%;
+  font-family: inherit;
+  color: var(--Very-dark-cyan);
+  text-align: right;
+  padding-right: 15px;
+}
+
+.people-heading {
+  color: var(--Grayish-cyan);
+}
+
+.tip-person {
+  background-color: var(--Very-dark-cyan);
+  width: 83%;
+  margin-bottom: 10px;
+  color: white;
+  border-radius: 7px;
+  padding: 30px;
+}
+
+.tip-person button {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: var(--Strong-cyan);
+  border-radius: 5px;
+  border: none;
+  position: relative;
+  color: var(--Very-dark-cyan);
+  font-family: inherit;
+  margin-top: 30px;
+  margin-bottom: -10px;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.person {
+  font-size: 13px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-tip {
+  margin-bottom: 10px;
+}
+
+.dollars {
+  color: var(--Strong-cyan);
+  position: relative;
+  top: 12px;
+  font-size: 24px;
+}
+
+.forperson {
+  color: hsl(184, 14%, 56%);
+}
+
+.button button:hover {
+  background-color: var(--Very-light-grayish-cyan);
+  color: var(--Very-dark-cyan);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.input input:focus {
+  border: 3px solid var(--Strong-cyan);
+}
+
+#error {
+  color: red;
+}
+
+@media (max-width: 360px) {
+  .container {
+    max-width: 100%;
+    padding: 20px;
+  }
+  .Select-tip {
+    width: 50%;
+    position: relative;
+    left: 60px;
+  }
+  .Select-tip button,
+  #Custom {
+    max-width: 100px;
+  }
+  .tip-person {
+    padding-top: 10px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .input input {
+    width: 85%;
+    left: 8%;
+  }
+  .input {
+    position: relative;
+    left: 5%;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 750px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 900px;
+  }
+  .pc-left-content {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+  }
+  .buttons {
+    width: 92%;
+    position: relative;
+    left: 2.5%;
+  }
+  .Select-tip button,
+  #Custom {
+    max-width: 150px;
+  }
+  .tip-person {
+    height: 400px;
+    width: 400px;
+  }
+  .tip-person button {
+    margin-top: 170px;
+  }
+  .dollars {
+    font-size: 35px;
+  }
+  .left-tip {
+    margin-top: 20px;
+  }
+  .People-Input input {
+    width: 93%;
+    position: relative;
+    right: 5%;
+  }
+}
